@@ -15,6 +15,7 @@ const db=mysql.createPool({
 
 })
 
+
 export const connectDB=async () =>{
     try{
         const connection= await db.getConnection();//connecting express and mysql
@@ -24,4 +25,5 @@ export const connectDB=async () =>{
         console.error("Connection is not established",err);
     }
 }
+
 export default db;
